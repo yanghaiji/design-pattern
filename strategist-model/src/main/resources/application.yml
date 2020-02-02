@@ -1,0 +1,7 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /strategist
+spring:
+  application:
+    name: javayh-strategist
