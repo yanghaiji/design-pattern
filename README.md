@@ -5,4 +5,5 @@
 
 ## 模块
 
-- [Ostrategist-model 策略模式](strategist-model/README.md)
+- [strategist-model 策略模式](strategist-mode/README.md)
+- [factory-model 工厂模式](factory-mode/README.md)
