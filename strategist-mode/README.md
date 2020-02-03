@@ -1,4 +1,4 @@
-## Strategist Model 
+## Strategist Mode
 
 本文主要讲解策略模式，进行实验模拟
 

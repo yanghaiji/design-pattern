@@ -1,4 +1,4 @@
-## Factory Model 
+## Factory Mode
 
 本文主要讲解工厂模式，进行实验模拟
 
