@@ -23,6 +23,7 @@
     通用:http://localhost:8091/factory/getCurrency
 ![full stack developer tutorial](../doc/img/2.png)
 
+## 总结
 从上面的实例中可以很容易看出来，工厂方法模式的重点就在这个工厂接口了。
 目标可以无限扩展，工厂类也要随之扩展，一对一存在，满足了开闭原则，
 但如果目标实现较多，工厂实现类也会增多，不简洁。

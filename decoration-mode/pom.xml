@@ -9,11 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>factory-mode</artifactId>
+    <artifactId>decoration-mode</artifactId>
 
-    <name>factory-mode</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
+    <name>decoration-mode</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,10 +20,12 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>com.javayh</groupId>
             <artifactId>javayh-common</artifactId>
             <version>1.0.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

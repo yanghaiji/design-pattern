@@ -18,10 +18,13 @@
         <module>strategist-mode</module>
         <module>javayh-common</module>
         <module>factory-mode</module>
+        <module>decoration-mode</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>1.8</java.version>
     </properties>
 

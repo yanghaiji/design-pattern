@@ -19,6 +19,15 @@ public class DataResult<T> {
     private String msg;
     private T data;
 
+    public DataResult(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public static <T> DataResult<T> success(){
+        return new DataResult<T>(ResultCode.SUCCESS.getCode(),ResultCode.SUCCESS.getMessage());
+    }
+
     public static <T> DataResult<T> success(T dataPrama){
         return new DataResult<T>(ResultCode.SUCCESS.getCode(),ResultCode.SUCCESS.getMessage(),dataPrama);
     }

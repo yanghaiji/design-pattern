@@ -15,4 +15,6 @@ public interface Constant {
     String SET_MEAL_II = "2";
     String HUAWEI = "HW";
     String IPHONE = "IPHONE";
+    String CPU = "Core i7";
+
 }
