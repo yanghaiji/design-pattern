@@ -11,4 +11,8 @@ public interface Constant {
     String VIP = "VIP";
 
     String MSG = "欢迎下次光临!";
+    String SET_MEAL_I = "1";
+    String SET_MEAL_II = "2";
+    String HUAWEI = "HW";
+    String IPHONE = "IPHONE";
 }
