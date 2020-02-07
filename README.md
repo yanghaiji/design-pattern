@@ -8,6 +8,7 @@
 - [strategist-model 策略模式](strategist-mode/README.md)
 - [factory-model 工厂模式](factory-mode/README.md)
 - [decoration-model 装饰者模式](decoration-mode/README.md)
+- [template-model 装饰者模式](template-mode/README.md)
 
 
  ## 关注 Java有货领取更多资料
