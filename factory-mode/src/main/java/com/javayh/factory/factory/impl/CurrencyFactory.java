@@ -1,10 +1,10 @@
-package com.javayh.factory.impl;
+package com.javayh.factory.factory.impl;
 
+import com.javayh.factory.service.impl.HWServiceImpl;
 import com.javayh.constant.Constant;
-import com.javayh.factory.PhoneFactory;
-import com.javayh.service.PhoneService;
-import com.javayh.service.impl.HWServiceImpl;
-import com.javayh.service.impl.IPhoneServiceImpl;
+import com.javayh.factory.factory.PhoneFactory;
+import com.javayh.factory.service.PhoneService;
+import com.javayh.factory.service.impl.IPhoneServiceImpl;
 import com.javayh.vo.PhoneVO;
 
 /**
@@ -21,7 +21,7 @@ public class CurrencyFactory implements PhoneFactory {
      * @author Dylan
      * @date 2020/2/3 0003
      * @param [phoneVO]
-     * @return com.javayh.service.PhoneService
+     * @return PhoneService
      */
     @Override
     public PhoneService craetePhone(PhoneVO phoneVO) {

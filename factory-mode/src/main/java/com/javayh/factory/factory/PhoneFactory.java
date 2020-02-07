@@ -1,6 +1,6 @@
-package com.javayh.factory;
+package com.javayh.factory.factory;
 
-import com.javayh.service.PhoneService;
+import com.javayh.factory.service.PhoneService;
 import com.javayh.vo.PhoneVO;
 
 /**
@@ -17,7 +17,7 @@ public interface PhoneFactory {
      * @author Dylan
      * @date 2020/2/3 0003
      * @param [phoneVO]
-     * @return com.javayh.service.PhoneService
+     * @return PhoneService
      */
     PhoneService craetePhone(PhoneVO phoneVO);
 }

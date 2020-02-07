@@ -1,18 +1,18 @@
-package com.javayh;
+package com.javayh.template;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  *
- * 工厂模式
+ * 模板模式
  *
  */
 @SpringBootApplication
-public class FactoryApp
+public class TemplateApp
 {
     public static void main( String[] args )
     {
-        SpringApplication.run(FactoryApp.class,args);
+        SpringApplication.run(TemplateApp.class,args);
     }
 }

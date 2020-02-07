@@ -17,4 +17,5 @@ public interface Constant {
     String IPHONE = "IPHONE";
     String CPU = "Core i7";
 
+    String GIRL ="女";
 }

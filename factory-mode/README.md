@@ -19,6 +19,7 @@
 - 实现 PhoneService(HWServiceImpl / IPhoneServiceImpl ...) 
 - 定义手机适配工厂 PhoneFactory
 - 实现PhoneFactory (CurrencyFactory(通用工厂) / IPhoneFactory / HWPhoneFactory ...) 
+![full stack developer tutorial](../doc/img/7.png)
 - 模拟请求  
     通用:http://localhost:8091/factory/getCurrency
 ![full stack developer tutorial](../doc/img/2.png)

@@ -1,4 +1,4 @@
-package com.javayh.service;
+package com.javayh.factory.service;
 
 import com.javayh.dto.PhoneDTO;
 import com.javayh.vo.PhoneVO;

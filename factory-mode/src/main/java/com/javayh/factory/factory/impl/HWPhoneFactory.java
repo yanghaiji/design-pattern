@@ -1,10 +1,9 @@
-package com.javayh.factory.impl;
+package com.javayh.factory.factory.impl;
 
-import com.javayh.factory.PhoneFactory;
-import com.javayh.service.PhoneService;
-import com.javayh.service.impl.HWServiceImpl;
+import com.javayh.factory.service.impl.HWServiceImpl;
+import com.javayh.factory.factory.PhoneFactory;
+import com.javayh.factory.service.PhoneService;
 import com.javayh.vo.PhoneVO;
-import org.springframework.stereotype.Component;
 
 /**
  * @author Dylan Yang

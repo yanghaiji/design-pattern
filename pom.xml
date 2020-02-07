@@ -19,6 +19,7 @@
         <module>javayh-common</module>
         <module>factory-mode</module>
         <module>decoration-mode</module>
+        <module>template-mode</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
