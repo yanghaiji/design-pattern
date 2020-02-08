@@ -10,6 +10,8 @@
 - [decoration-model 装饰者模式](decoration-mode/README.md)
 - [template-model 模板模式](template-mode/README.md)
 
+## 设计模式相关详细记录
+<a>设计模式概念及优缺点介绍 <p>https://blog.csdn.net/weixin_38937840/category_9701281.html</p><a/>
 
  ## 关注 Java有货领取更多资料
 **联系小编。微信：372787553，带您进群互相学习**
