@@ -18,6 +18,8 @@
 - 定义购买的XX接口 ComputerService
 - 实现 ComputerService (ComputerServiceImpl / PhoneServiceImpl)
 - 定义装饰者 Decorator，对ComputerService进行服务增强，这里是进行统一赠品的配置
+- 结构图
+![full stack developer tutorial](../doc/img/9.png)
 - 模拟请求   http://localhost:8092/decoration/getComputer/MAC
 ![full stack developer tutorial](../doc/img/4.png)
 
