@@ -1,0 +1,7 @@
+server:
+  port: 8094
+  servlet:
+    context-path: /singleton
+spring:
+  application:
+    name: singleton-mode
