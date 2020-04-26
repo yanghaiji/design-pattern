@@ -1,5 +1,8 @@
 package com.javayh.constant;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * @author Dylan Yang
  * @Description: 常量池
@@ -18,4 +21,13 @@ public interface Constant {
     String CPU = "Core i7";
 
     String GIRL ="女";
+
+    String DEV = "dev";
+    String RUN = "run";
+    String TEST = "test";
+    String UAT = "uat";
+
+    String STANDARD_ROOM = "standardRoom";
+    String FAMILY_ROOM = "familyRoom";
+    String PRESIDENTIAL_SUITE = "presidentialSuite";
 }
