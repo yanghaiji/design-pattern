@@ -20,40 +20,45 @@ public class HotelType {
     public static void get(HotelEntity hotelEntity) {
         String type = hotelEntity.getType();
         String num = null;
-        if (Constant.STANDARD_ROOM.equalsIgnoreCase(type)) {
-            Map<String, Object> standardRoom = HotelEntity.getStandardRoom();
-            if(standardRoom.size() < 100){
-                num = StringUtils.num();
-                System.out.println(hotelEntity.getUserName()+"正在预定.......");
-                standardRoom.put(hotelEntity.getUserName(), num);
-                System.out.println(hotelEntity.getUserName()+"标间预定成功;房间号为:"+num);
-            }else {
-                System.out.println("正在给您进行房间升级......");
-                hotelEntity.setType(Constant.FAMILY_ROOM) ;
-                type = hotelEntity.getType();
+        Map<String, Object> standardRoom = HotelEntity.getStandardRoom();
+        Map<String, Object> presidentialSuite = HotelEntity.getPresidentialSuite();
+        Map<String, Object> familyRoom = HotelEntity.getFamilyRoom();
+        if(standardRoom.size() + familyRoom.size() + presidentialSuite.size() == 200){
+            System.out.println("抱歉,本店客房已住满!");
+        }else {
+            if (Constant.STANDARD_ROOM.equalsIgnoreCase(type)) {
+                if(standardRoom.size() < 100){
+                    num = StringUtils.num();
+                    System.out.println(hotelEntity.getUserName()+"正在预定.......");
+                    standardRoom.put(hotelEntity.getUserName(), num);
+                    System.out.println(hotelEntity.getUserName()+"标间预定成功;房间号为:"+num);
+                }else {
+                    System.out.println("正在给您进行房间升级......");
+                    hotelEntity.setType(Constant.FAMILY_ROOM) ;
+                    type = hotelEntity.getType();
+                }
             }
-        }
-        if (Constant.FAMILY_ROOM.equalsIgnoreCase(type)) {
-            Map<String, Object> familyRoom = HotelEntity.getFamilyRoom();
-            if(familyRoom.size() < 50){
-                num = StringUtils.num();
-                System.out.println(hotelEntity.getUserName()+"正在预定.......");
-                familyRoom.put(hotelEntity.getUserName(), num);
-                System.out.println(hotelEntity.getUserName()+"家庭房预定成功;房间号为:"+num);
-            }else {
-                System.out.println("正在给您进行房间升级......");
-                hotelEntity.setType(Constant.PRESIDENTIAL_SUITE) ;
-                type = hotelEntity.getType();
+            if (Constant.FAMILY_ROOM.equalsIgnoreCase(type)) {
+                if(familyRoom.size() < 50){
+                    num = StringUtils.num();
+                    System.out.println(hotelEntity.getUserName()+"正在预定.......");
+                    familyRoom.put(hotelEntity.getUserName(), num);
+                    System.out.println(hotelEntity.getUserName()+"家庭房预定成功;房间号为:"+num);
+                }else {
+                    System.out.println("正在给您进行房间升级......");
+                    hotelEntity.setType(Constant.PRESIDENTIAL_SUITE) ;
+                    type = hotelEntity.getType();
+                }
             }
-        }
-        if (Constant.PRESIDENTIAL_SUITE.equalsIgnoreCase(type)) {
-            Map<String, Object> presidentialSuite = HotelEntity.getPresidentialSuite();
-            if(presidentialSuite.size() < 50){
-                num = StringUtils.num();
-                System.out.println(hotelEntity.getUserName()+"正在预定.......");
-                presidentialSuite.put(hotelEntity.getUserName(), num);
-                System.out.println(hotelEntity.getUserName()+"套房预定成功;房间号为:"+num);
+            if (Constant.PRESIDENTIAL_SUITE.equalsIgnoreCase(type)) {
+                if(presidentialSuite.size() < 50){
+                    num = StringUtils.num();
+                    System.out.println(hotelEntity.getUserName()+"正在预定.......");
+                    presidentialSuite.put(hotelEntity.getUserName(), num);
+                    System.out.println(hotelEntity.getUserName()+"套房预定成功;房间号为:"+num);
+                }
             }
+            System.out.println("-----------------------------");
         }
     }
 

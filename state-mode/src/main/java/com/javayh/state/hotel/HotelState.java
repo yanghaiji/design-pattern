@@ -1,12 +1,6 @@
 package com.javayh.state.hotel;
 
-import com.javayh.constant.Constant;
 import com.javayh.domain.HotelEntity;
-import com.javayh.uitl.StringUtils;
-
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * <p>
@@ -19,8 +13,28 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public interface HotelState {
 
+    /**
+     * <p>
+     *     预定
+     * </p>
+     * @version 1.0.0
+     * @author Dylan-haiji
+     * @since 2020/4/27
+     * @param hotelEntity
+     * @return java.lang.Boolean
+     */
     Boolean add(HotelEntity hotelEntity);
 
+    /**
+     * <p>
+     *      退房
+     * </p>
+     * @version 1.0.0
+     * @author Dylan-haiji
+     * @since 2020/4/27
+     * @param hotelEntity
+     * @return java.lang.Boolean
+     */
     Boolean remove(HotelEntity hotelEntity);
 
 }
