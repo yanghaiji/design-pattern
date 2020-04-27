@@ -1,5 +1,6 @@
 package com.javayh.domain;
 
+import com.javayh.constant.Constant;
 import lombok.Data;
 
 import java.util.Map;
@@ -23,20 +24,44 @@ public class HotelEntity {
     private static volatile Map<String,Object> standardRoom;
     private static volatile Map<String,Object> familyRoom ;
     private static volatile Map<String,Object> presidentialSuite ;
-    private static ReentrantLock locK = new ReentrantLock(true);
+    private static volatile HotelEntity hotelEntity ;
+    /**锁*/
+    private static ReentrantLock standardRoomLocK = new ReentrantLock(true);
+    private static ReentrantLock familyRoomLocK = new ReentrantLock(true);
+    private static ReentrantLock presidentialSuiteLocK = new ReentrantLock(true);
+    private static ReentrantLock hotelEntityLock = new ReentrantLock(true);
     private String userName;
     private String type;
+    private AtomicInteger roomNum = new AtomicInteger(0);
+
+    private HotelEntity() {
+    }
+
+    public static HotelEntity getInstance() {
+        if(hotelEntity == null ){
+            try {
+                if (hotelEntityLock.tryLock()){
+                    if(hotelEntity == null ){
+                        hotelEntity = new HotelEntity();
+                    }
+                }
+            }finally {
+                hotelEntityLock.unlock();
+            }
+        }
+        return hotelEntity;
+    }
 
     public static Map<String, Object> getStandardRoom() {
         if(standardRoom == null ){
             try {
-                if (locK.tryLock()){
+                if (standardRoomLocK.tryLock()){
                     if(standardRoom == null ){
                         standardRoom = new ConcurrentHashMap<>(100);
                     }
                 }
             }finally {
-                locK.unlock();
+                standardRoomLocK.unlock();
             }
         }
         return standardRoom;
@@ -45,13 +70,13 @@ public class HotelEntity {
     public static Map<String, Object> getFamilyRoom() {
             if(familyRoom == null ){
                 try{
-                    if (locK.tryLock()){
+                    if (familyRoomLocK.tryLock()){
                         if(familyRoom == null ){
                             familyRoom = new ConcurrentHashMap<>(100);
                         }
                     }
                 }finally {
-                    locK.unlock();
+                    familyRoomLocK.unlock();
                 }
             }
 
@@ -61,13 +86,13 @@ public class HotelEntity {
     public static Map<String, Object> getPresidentialSuite() {
         if(presidentialSuite == null ){
             try{
-                if (locK.tryLock()){
+                if (presidentialSuiteLocK.tryLock()){
                     if(presidentialSuite == null ){
                         presidentialSuite = new ConcurrentHashMap<>(100);
                     }
                 }
             }finally {
-                locK.unlock();
+                presidentialSuiteLocK.unlock();
             }
 
         }

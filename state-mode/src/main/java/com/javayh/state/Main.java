@@ -20,21 +20,21 @@ public class Main {
 //        StateContext context = new StateContext();
 //        context.request("OOO");
 
-        for (int i = 1; i < 60; i++) {
+        for (int i = 1; i <= 120; i++) {
             HotelContext hotelContext = new HotelContext();
-            HotelEntity hotelEntity = new HotelEntity();
+            HotelEntity hotelEntity = HotelEntity.getInstance();
             hotelEntity.setUserName("admin"+i);
-            hotelEntity.setType(Constant.PRESIDENTIAL_SUITE);
+//            hotelEntity.setType(Constant.PRESIDENTIAL_SUITE);
             hotelContext.run(hotelEntity);
         }
 
-        for (int i = 1; i < 60; i++) {
-            HotelContext hotelContext = new HotelContext();
-            HotelEntity hotelEntity = new HotelEntity();
-            hotelEntity.setUserName("admin"+i);
-            hotelEntity.setType(Constant.PRESIDENTIAL_SUITE);
-            hotelContext.stop(hotelEntity);
-        }
+//        for (int i = 1; i < 60; i++) {
+//            HotelContext hotelContext = new HotelContext();
+//            HotelEntity hotelEntity = new HotelEntity();
+//            hotelEntity.setUserName("admin"+i);
+//            hotelEntity.setType(Constant.PRESIDENTIAL_SUITE);
+//            hotelContext.stop(hotelEntity);
+//        }
     }
 
 }

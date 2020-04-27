@@ -24,28 +24,36 @@ public class HotelType {
             Map<String, Object> standardRoom = HotelEntity.getStandardRoom();
             if(standardRoom.size() < 100){
                 num = StringUtils.num();
-                System.out.println(hotelEntity.getUserName()+"正在订房.......");
+                System.out.println(hotelEntity.getUserName()+"正在预定.......");
                 standardRoom.put(hotelEntity.getUserName(), num);
-                System.out.println(hotelEntity.getUserName()+"正在订房成功;房间号为:"+num);
+                System.out.println(hotelEntity.getUserName()+"标间预定成功;房间号为:"+num);
+            }else {
+                System.out.println("正在给您进行房间升级......");
+                hotelEntity.setType(Constant.FAMILY_ROOM) ;
+                type = hotelEntity.getType();
             }
-        } else if (Constant.FAMILY_ROOM.equalsIgnoreCase(type)) {
+        }
+        if (Constant.FAMILY_ROOM.equalsIgnoreCase(type)) {
             Map<String, Object> familyRoom = HotelEntity.getFamilyRoom();
             if(familyRoom.size() < 50){
                 num = StringUtils.num();
-                System.out.println(hotelEntity.getUserName()+"正在订房.......");
+                System.out.println(hotelEntity.getUserName()+"正在预定.......");
                 familyRoom.put(hotelEntity.getUserName(), num);
-                System.out.println(hotelEntity.getUserName()+"正在订房成功;房间号为:"+num);
+                System.out.println(hotelEntity.getUserName()+"家庭房预定成功;房间号为:"+num);
+            }else {
+                System.out.println("正在给您进行房间升级......");
+                hotelEntity.setType(Constant.PRESIDENTIAL_SUITE) ;
+                type = hotelEntity.getType();
             }
-        } else if (Constant.PRESIDENTIAL_SUITE.equalsIgnoreCase(type)) {
+        }
+        if (Constant.PRESIDENTIAL_SUITE.equalsIgnoreCase(type)) {
             Map<String, Object> presidentialSuite = HotelEntity.getPresidentialSuite();
             if(presidentialSuite.size() < 50){
                 num = StringUtils.num();
-                System.out.println(hotelEntity.getUserName()+"正在订房.......");
+                System.out.println(hotelEntity.getUserName()+"正在预定.......");
                 presidentialSuite.put(hotelEntity.getUserName(), num);
-                System.out.println(hotelEntity.getUserName()+"正在订房成功;房间号为:"+num);
+                System.out.println(hotelEntity.getUserName()+"套房预定成功;房间号为:"+num);
             }
-        }else {
-            System.out.println("非法操作!");
         }
     }
 

@@ -26,7 +26,8 @@ public class HotelContext {
     }
 
     public Boolean run(HotelEntity hotelEntity){
-        String type = hotelEntity.getType();
+        String type = hotelEntity.getType() == null ? Constant.STANDARD_ROOM : hotelEntity.getType();
+        hotelEntity.setType(type);
         if(Constant.STANDARD_ROOM.equalsIgnoreCase(type)){
             hotelState = new FreeHotel();
         }else if(Constant.FAMILY_ROOM.equalsIgnoreCase(type)){
