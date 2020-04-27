@@ -26,12 +26,15 @@ public class HotelType {
         if(standardRoom.size() + familyRoom.size() + presidentialSuite.size() == 200){
             System.out.println("抱歉,本店客房已住满!");
         }else {
+            System.out.println("本店标间剩余:"+ (100 -standardRoom.size()));
+            System.out.println("本店家庭房剩余:"+ (50 -familyRoom.size()));
+            System.out.println("本店套房剩余:"+ (50 -presidentialSuite.size()));
             if (Constant.STANDARD_ROOM.equalsIgnoreCase(type)) {
                 if(standardRoom.size() < 100){
                     num = StringUtils.num();
-                    System.out.println(hotelEntity.getUserName()+"正在预定.......");
+                    System.out.println(hotelEntity.getUserName()+"-正在预定.......");
                     standardRoom.put(hotelEntity.getUserName(), num);
-                    System.out.println(hotelEntity.getUserName()+"标间预定成功;房间号为:"+num);
+                    System.out.println(hotelEntity.getUserName()+"-标间预定成功;房间号为:"+num);
                 }else {
                     System.out.println("正在给您进行房间升级......");
                     hotelEntity.setType(Constant.FAMILY_ROOM) ;
@@ -41,9 +44,9 @@ public class HotelType {
             if (Constant.FAMILY_ROOM.equalsIgnoreCase(type)) {
                 if(familyRoom.size() < 50){
                     num = StringUtils.num();
-                    System.out.println(hotelEntity.getUserName()+"正在预定.......");
+                    System.out.println(hotelEntity.getUserName()+"-正在预定.......");
                     familyRoom.put(hotelEntity.getUserName(), num);
-                    System.out.println(hotelEntity.getUserName()+"家庭房预定成功;房间号为:"+num);
+                    System.out.println(hotelEntity.getUserName()+"-家庭房预定成功;房间号为:"+num);
                 }else {
                     System.out.println("正在给您进行房间升级......");
                     hotelEntity.setType(Constant.PRESIDENTIAL_SUITE) ;
@@ -53,9 +56,9 @@ public class HotelType {
             if (Constant.PRESIDENTIAL_SUITE.equalsIgnoreCase(type)) {
                 if(presidentialSuite.size() < 50){
                     num = StringUtils.num();
-                    System.out.println(hotelEntity.getUserName()+"正在预定.......");
+                    System.out.println(hotelEntity.getUserName()+"-正在预定.......");
                     presidentialSuite.put(hotelEntity.getUserName(), num);
-                    System.out.println(hotelEntity.getUserName()+"套房预定成功;房间号为:"+num);
+                    System.out.println(hotelEntity.getUserName()+"-套房预定成功;房间号为:"+num);
                 }
             }
             System.out.println("-----------------------------");
