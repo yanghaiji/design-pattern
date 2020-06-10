@@ -27,7 +27,7 @@ public class GameProxy implements IGameFrame {
      */
     public GameProxy(RealGame realGame) {
         if(ObjectUtils.isEmpty(realGame)){
-            realGame = new RealGame();
+            this.realGame = new RealGame();
         }
         this.realGame = realGame;
     }
